@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Grennity</title>
+    <link rel="icon" type="image/png" href="/Img/LogoGnormal.png">
+    <link rel="stylesheet" href="../Styles/Contacto.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../Img/LogoNavBar.jpg" alt="Grennity Logo">
+            </div>
+            <nav class="nav">
+                <a href="/index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    Inicio
+                </a>
+                <a href="/pages/Mapa.html" class="nav-item">
+                    <i class="fas fa-map"></i>
+                    Mapa
+                </a>
+                <a href="/pages/Educativo.html" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    Educativo
+                </a>
+                <a href="/pages/SugerirPunto.html" class="nav-item">
+                    <i class="fas fa-plus"></i>
+                    Sugerir Punto
+                    <span class="new-badge">Nuevo</span>
+                </a>
+                <a href="/pages/Contacto.html" class="nav-item active">
+                    <i class="fas fa-phone"></i>
+                    Contacto
+                </a>
+                <a href="/pages/Configuracion.html" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    Configuración
+                </a>
+                <button class="login-btn">
+                    <i class="fas fa-user"></i>
+                    Iniciar Sesión
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Contacto y Ayuda</h1>
+                    <p class="hero-subtitle">¿Tienes preguntas o necesitas ayuda? Estamos aquí para apoyarte</p>
+                </div>
+            </section>
+
+            <!-- Main Grid Layout -->
+            <div class="main-grid">
+                <!-- Contact Form Section -->
+                <section class="form-section">
+                    <div class="form-container">
+                        <h2 class="form-title">
+                            <i class="fas fa-envelope"></i>
+                            Envíanos un mensaje
+                        </h2>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-field">
+                                <label for="fullName" class="field-label">Nombre completo *</label>
+                                <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Tu nombre" required>
+                                <div class="field-icon">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="email" class="field-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="email@gmail.com" required>
+                                <div class="field-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="category" class="field-label">Categoría *</label>
+                                <div class="select-container">
+                                    <select id="category" name="category" class="form-select" required>
+                                        <option value="">Selecciona el tipo de consulta</option>
+                                        <option value="general">Consulta General</option>
+                                        <option value="technical">Soporte Técnico</option>
+                                        <option value="suggestion">Sugerencia</option>
+                                        <option value="report">Reportar Problema</option>
+                                        <option value="business">Asociación Comercial</option>
+                                    </select>
+                                    <div class="field-icon">
+                                        <i class="fas fa-tag"></i>
+                                    </div>
+                                    <div class="select-arrow">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="subject" class="field-label">Asunto *</label>
+                                <input type="text" id="subject" name="subject" class="form-input" placeholder="Resumen breve" required>
+                                <div class="field-icon">
+                                    <i class="fas fa-paperclip"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="message" class="field-label">Mensaje *</label>
+                                <textarea id="message" name="message" class="form-textarea" placeholder="Ingrese el mensaje" rows="5" required></textarea>
+                                <div class="field-icon">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-info">
+                                <i class="fas fa-info-circle"></i>
+                                <p>Responderemos a tu consulta en un plazo máximo de 24 horas. Para consultas urgentes, puedes contactarnos por teléfono.</p>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar mensaje
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Information Sidebar -->
+                <aside class="info-sidebar">
+                    <!-- Contact Methods Card -->
+                    <div class="info-card contact-methods">
+                        <h3 class="card-title">
+                            <i class="fas fa-phone"></i>
+                            Formas de Contacto
+                        </h3>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Teléfono</h4>
+                                <p class="method-detail">+54 11 1234-5678</p>
+                                <p class="method-schedule">Lun-Vie: 9:00-18:00</p>
+                                <button class="method-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Llamar ahora
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Email</h4>
+                                <p class="method-detail">contacto@greenity.com</p>
+                                <p class="method-schedule">Respuesta en 24 horas</p>
+                                <button class="method-btn">
+                                    <i class="fas fa-envelope"></i>
+                                    Enviar email
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Chat en vivo</h4>
+                                <p class="method-detail">Disponible</p>
+                                <p class="method-schedule">Lun-Vie: 9:00-18:00</p>
+                                <button class="method-btn">
+                                    <i class="fas fa-comments"></i>
+                                    Iniciar chat
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Office Hours Card -->
+                    <div class="info-card office-hours">
+                        <h3 class="card-title">
+                            <i class="fas fa-clock"></i>
+                            Horarios de Atención
+                        </h3>
+                        <div class="hours-list">
+                            <div class="hour-item">
+                                <span class="day">Lunes - Viernes</span>
+                                <span class="time">9:00 - 18:00</span>
+                            </div>
+                            <div class="hour-item">
+                                <span class="day">Sábados</span>
+                                <span class="time">10:00 - 14:00</span>
+                            </div>
+                            <div class="hour-item">
+                                <span class="day">Domingos</span>
+                                <span class="time closed">Cerrado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Office Location Card -->
+                    <div class="info-card office-location">
+                        <h3 class="card-title">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Nuestra Oficina
+                        </h3>
+                        <div class="location-content">
+                            <p class="address">Greenity Headquarters<br>
+                            Av. Corrientes 1234, Piso 5<br>
+                            Buenos Aires, Argentina<br>
+                            C1043AAZ</p>
+                            <button class="location-btn">
+                                <i class="fas fa-map"></i>
+                                Ver en Google Maps
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Urgent Contact Card -->
+                    <div class="info-card urgent-contact">
+                        <h3 class="card-title">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            ¿Consulta urgente?
+                        </h3>
+                        <p>Para problemas críticos con puntos de reciclaje o emergencias ambientales, contáctanos inmediatamente.</p>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <div class="faq-container">
+                    <h2 class="faq-title">
+                        <i class="fas fa-question-circle"></i>
+                        Preguntas Frecuentes
+                    </h2>
+                    
+                    <div class="faq-search">
+                        <div class="search-container">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="¿Qué te interesa saber?" class="search-input">
+                        </div>
+                    </div>
+
+                    <div class="faq-categories">
+                        <!-- General Category -->
+                        <div class="faq-category">
+                            <h3 class="category-title">General</h3>
+                            <div class="faq-items">
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>¿Cómo funciona Greenity?</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>Greenity es una plataforma que te ayuda a encontrar puntos de reciclaje cercanos a tu ubicación. Simplemente abre el mapa, busca tu área y descubre los centros de reciclaje disponibles.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>¿Es gratuito usar Greenity?</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>Sí, Greenity es completamente gratuito. No cobramos por usar la plataforma ni por sugerir nuevos puntos de reciclaje.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Puntos de Reciclaje Category -->
+                        <div class="faq-category">
+                            <h3 class="category-title">Puntos de Reciclaje</h3>
+                            <div class="faq-items">
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>¿Cómo puedo sugerir un nuevo punto de reciclaje?</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>Puedes sugerir un nuevo punto usando el formulario "Sugerir Punto" en nuestro sitio web. Completa la información del lugar y nuestro equipo lo verificará antes de publicarlo.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>¿Qué hago si un punto de reciclaje está cerrado o la información es incorrecta?</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>Puedes reportar el problema usando el botón "Reportar" en la página del punto específico, o contactarnos directamente a través de este formulario.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reciclaje Category -->
+                        <div class="faq-category">
+                            <h3 class="category-title">Reciclaje</h3>
+                            <div class="faq-items">
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>¿Qué materiales se pueden reciclar?</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>Se pueden reciclar plásticos, papel, cartón, vidrio, metales, electrónicos, pilas, aceite usado, textiles y materiales orgánicos. Cada punto acepta diferentes tipos de materiales.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>¿Necesito limpiar los envases antes de reciclarlos?</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>Sí, es recomendable enjuagar los envases para evitar contaminación y facilitar el proceso de reciclaje. No es necesario usar jabón, solo agua.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Técnico Category -->
+                        <div class="faq-category">
+                            <h3 class="category-title">Técnico</h3>
+                            <div class="faq-items">
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>¿Por qué no puedo ver mi ubicación en el mapa?</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>Verifica que tengas habilitada la geolocalización en tu navegador. También asegúrate de tener una conexión a internet estable.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span>La aplicación no carga correctamente</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>Intenta refrescar la página o limpiar la caché de tu navegador. Si el problema persiste, contacta nuestro soporte técnico.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-footer">
+                        <p>¿No encontraste lo que buscabas?</p>
+                        <button class="contact-btn">
+                            <i class="fas fa-envelope"></i>
+                            Contáctanos directamente
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+              window.voiceflow.chat.load({
+                verify: { projectID: '68ce0e495682320b1b0f1dfe' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production',
+                voice: {
+                  url: "https://runtime-api.voiceflow.com"
+                }
+              });
+            }
+            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
+            v.type = "text/javascript"; 
+            s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+      </script>
+
+    <script src="../Logic/Contacto.js"></script>
+</body>
+</html>

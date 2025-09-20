@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugerir Punto de Reciclaje - Grennity</title>
+    <link rel="icon" type="image/png" href="/Img/LogoGnormal.png">
+    <link rel="stylesheet" href="../Styles/SugerirPunto.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../Img/LogoNavBar.jpg" alt="Grennity Logo">
+            </div>
+            <nav class="nav">
+                <a href="/index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    Inicio
+                </a>
+                <a href="/pages/Mapa.html" class="nav-item">
+                    <i class="fas fa-map"></i>
+                    Mapa
+                </a>
+                <a href="/pages/Educativo.html" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    Educativo
+                </a>
+                <a href="/pages/SugerirPunto.html" class="nav-item active">
+                    <i class="fas fa-plus"></i>
+                    Sugerir Punto
+                    <span class="new-badge">Nuevo</span>
+                </a>
+                <a href="/pages/Contacto.html" class="nav-item">
+                    <i class="fas fa-phone"></i>
+                    Contacto
+                </a>
+                <a href="/pages/Configuracion.html" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    Configuración
+                </a>
+                <button class="login-btn">
+                    <i class="fas fa-user"></i>
+                    Iniciar Sesión
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <h1 class="hero-title">Sugerir Nuevo Punto de Reciclaje</h1>
+                    <p class="hero-subtitle">Ayúdanos a expandir nuestra red de puntos de reciclaje compartiendo
+                        información sobre nuevos lugares en tu comunidad</p>
+                </div>
+            </section>
+
+            <!-- Main Content Grid -->
+            <div class="main-grid">
+                <!-- Form Section -->
+                <section class="form-section">
+                    <div class="form-container">
+                        <form class="suggestion-form" id="suggestionForm">
+                            <!-- Información Básica -->
+                            <div class="form-group">
+                                <h2 class="form-section-title">
+                                    <i class="fas fa-info-circle"></i>
+                                    Información Básica
+                                </h2>
+
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label for="pointName" class="field-label">Nombre del Punto *</label>
+                                        <input type="text" id="pointName" name="pointName" class="form-input"
+                                            placeholder="Ej: Centro de Reciclaje Municipal" required>
+                                        <div class="field-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label for="pointType" class="field-label">Tipo de Punto *</label>
+                                        <div class="select-container">
+                                            <select id="pointType" name="pointType" class="form-select" required>
+                                                <option value="">Selecciona el tipo</option>
+                                                <option value="municipal">Centro Municipal</option>
+                                                <option value="privado">Centro Privado</option>
+                                                <option value="comercial">Punto Comercial</option>
+                                                <option value="comunitario">Punto Comunitario</option>
+                                                <option value="especializado">Centro Especializado</option>
+                                            </select>
+                                            <div class="field-icon">
+                                                <i class="fas fa-tag"></i>
+                                            </div>
+                                            <div class="select-arrow">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-field full-width">
+                                    <label for="description" class="field-label">Descripción del Punto</label>
+                                    <textarea id="description" name="description" class="form-textarea"
+                                        placeholder="Describe las características del punto, servicios que ofrece, etc."
+                                        rows="4"></textarea>
+                                    <div class="field-icon">
+                                        <i class="fas fa-align-left"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ubicación -->
+                            <div class="form-group">
+                                <h2 class="form-section-title">
+                                    <i class="fas fa-map"></i>
+                                    Ubicación
+                                </h2>
+
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label for="address" class="field-label">Dirección *</label>
+                                        <input type="text" id="address" name="address" class="form-input"
+                                            placeholder="Calle, número, colonia" required>
+                                        <div class="field-icon">
+                                            <i class="fas fa-road"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label for="city" class="field-label">Ciudad *</label>
+                                        <input type="text" id="city" name="city" class="form-input" placeholder="Ciudad"
+                                            required>
+                                        <div class="field-icon">
+                                            <i class="fas fa-city"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label for="state" class="field-label">Estado *</label>
+                                        <div class="select-container">
+                                            <select id="state" name="state" class="form-select" required>
+                                                <option value="">Selecciona el estado</option>
+                                                <option value="aguascalientes">Aguascalientes</option>
+                                                <option value="baja-california">Baja California</option>
+                                                <option value="baja-california-sur">Baja California Sur</option>
+                                                <option value="campeche">Campeche</option>
+                                                <option value="chiapas">Chiapas</option>
+                                                <option value="chihuahua">Chihuahua</option>
+                                                <option value="coahuila">Coahuila</option>
+                                                <option value="colima">Colima</option>
+                                                <option value="durango">Durango</option>
+                                                <option value="guanajuato">Guanajuato</option>
+                                                <option value="guerrero">Guerrero</option>
+                                                <option value="hidalgo">Hidalgo</option>
+                                                <option value="jalisco">Jalisco</option>
+                                                <option value="mexico">México</option>
+                                                <option value="michoacan">Michoacán</option>
+                                                <option value="morelos">Morelos</option>
+                                                <option value="nayarit">Nayarit</option>
+                                                <option value="nuevo-leon">Nuevo León</option>
+                                                <option value="oaxaca">Oaxaca</option>
+                                                <option value="puebla">Puebla</option>
+                                                <option value="queretaro">Querétaro</option>
+                                                <option value="quintana-roo">Quintana Roo</option>
+                                                <option value="san-luis-potosi">San Luis Potosí</option>
+                                                <option value="sinaloa">Sinaloa</option>
+                                                <option value="sonora">Sonora</option>
+                                                <option value="tabasco">Tabasco</option>
+                                                <option value="tamaulipas">Tamaulipas</option>
+                                                <option value="tlaxcala">Tlaxcala</option>
+                                                <option value="veracruz">Veracruz</option>
+                                                <option value="yucatan">Yucatán</option>
+                                                <option value="zacatecas">Zacatecas</option>
+                                            </select>
+                                            <div class="field-icon">
+                                                <i class="fas fa-map"></i>
+                                            </div>
+                                            <div class="select-arrow">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label for="postalCode" class="field-label">Código Postal</label>
+                                        <input type="text" id="postalCode" name="postalCode" class="form-input"
+                                            placeholder="12345" pattern="[0-9]{5}">
+                                        <div class="field-icon">
+                                            <i class="fas fa-mail-bulk"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="location-actions">
+                                    <button type="button" class="btn-secondary" id="useCurrentLocation">
+                                        <i class="fas fa-location-arrow"></i>
+                                        Usar mi ubicación actual
+                                    </button>
+                                    <button type="button" class="btn-outline" id="openMap">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        Seleccionar en mapa
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Materiales Aceptados -->
+                            <div class="form-group">
+                                <h2 class="form-section-title">
+                                    <i class="fas fa-recycle"></i>
+                                    Materiales Aceptados
+                                </h2>
+                                <p class="form-description">Selecciona todos los materiales que acepta este punto de
+                                    reciclaje</p>
+
+                                <div class="materials-grid">
+                                    <div class="material-category">
+                                        <h3 class="category-title">Plásticos</h3>
+                                        <div class="checkbox-group">
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="pet">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">PET (Botellas)</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="hdpe">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">HDPE (Envases)</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="pvc">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">PVC</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="ldpe">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">LDPE (Bolsas)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="material-category">
+                                        <h3 class="category-title">Papel y Cartón</h3>
+                                        <div class="checkbox-group">
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="newspaper">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Periódicos</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="magazines">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Revistas</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="cardboard">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Cartón</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="office-paper">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Papel de Oficina</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="material-category">
+                                        <h3 class="category-title">Vidrio</h3>
+                                        <div class="checkbox-group">
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="glass-bottles">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Botellas</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="glass-jars">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Frascos</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="glass-clear">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Vidrio Transparente</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="glass-colored">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Vidrio de Color</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="material-category">
+                                        <h3 class="category-title">Metales</h3>
+                                        <div class="checkbox-group">
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="aluminum">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Aluminio</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="steel">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Acero</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="tin-cans">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Latas de Conserva</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="copper">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Cobre</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="material-category">
+                                        <h3 class="category-title">Electrónicos</h3>
+                                        <div class="checkbox-group">
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="batteries">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Baterías</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="cellphones">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Celulares</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="computers">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Computadoras</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="cables">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Cables</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="material-category">
+                                        <h3 class="category-title">Otros</h3>
+                                        <div class="checkbox-group">
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="textiles">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Textiles</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="furniture">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Muebles</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="tires">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Llantas</span>
+                                            </label>
+                                            <label class="checkbox-item">
+                                                <input type="checkbox" name="materials" value="hazardous">
+                                                <span class="checkmark"></span>
+                                                <span class="checkbox-label">Materiales Peligrosos</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Horarios y Contacto -->
+                            <div class="form-group">
+                                <h2 class="form-section-title">
+                                    <i class="fas fa-clock"></i>
+                                    Horarios y Contacto
+                                </h2>
+
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label for="schedule" class="field-label">Horarios de Atención</label>
+                                        <input type="text" id="schedule" name="schedule" class="form-input"
+                                            placeholder="Ej: Lunes a Viernes 8:00 - 18:00">
+                                        <div class="field-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label for="phone" class="field-label">Teléfono de Contacto</label>
+                                        <input type="tel" id="phone" name="phone" class="form-input"
+                                            placeholder="(555) 123-4567">
+                                        <div class="field-icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-field full-width">
+                                    <label for="website" class="field-label">Sitio Web</label>
+                                    <input type="url" id="website" name="website" class="form-input"
+                                        placeholder="https://ejemplo.com">
+                                    <div class="field-icon">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Información Adicional -->
+                            <div class="form-group">
+                                <h2 class="form-section-title">
+                                    <i class="fas fa-plus-circle"></i>
+                                    Información Adicional
+                                </h2>
+
+                                <div class="form-field full-width">
+                                    <label for="additionalInfo" class="field-label">Información Adicional</label>
+                                    <textarea id="additionalInfo" name="additionalInfo" class="form-textarea"
+                                        placeholder="Cualquier información adicional que consideres relevante..."
+                                        rows="4"></textarea>
+                                    <div class="field-icon">
+                                        <i class="fas fa-info"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-field full-width">
+                                    <label for="photos" class="field-label">Fotos del Punto (Opcional)</label>
+                                    <div class="file-upload">
+                                        <input type="file" id="photos" name="photos" class="file-input" multiple
+                                            accept="image/*">
+                                        <label for="photos" class="file-upload-label">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Seleccionar fotos</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Términos y Condiciones -->
+                            <div class="form-group">
+                                <div class="checkbox-item terms">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-label">
+                                        Acepto los <a href="#" class="terms-link">términos y condiciones</a> y confirmo
+                                        que la información proporcionada es veraz.
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Submit Buttons -->
+                            <div class="form-actions">
+                                <button type="button" class="btn-secondary" id="saveDraft">
+                                    <i class="fas fa-save"></i>
+                                    Guardar Borrador
+                                </button>
+                                <button type="submit" class="btn-primary" id="submitForm">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Enviar Sugerencia
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Information Sidebar -->
+                <aside class="info-sidebar">
+                    <!-- Community Impact Card -->
+                    <div class="info-card impact-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-chart-line"></i>
+                            Impacto de la Comunidad
+                        </h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">1,247</div>
+                                <div class="stat-label">Sugerencias recibidas</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">892</div>
+                                <div class="stat-label">Puntos verificados</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">156</div>
+                                <div class="stat-label">Colaboradores activos</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Why Collaborate Card -->
+                    <div class="info-card benefits-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-heart"></i>
+                            ¿Por qué colaborar?
+                        </h3>
+                        <ul class="benefits-list">
+                            <li class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Ayudas a tu comunidad local</span>
+                            </li>
+                            <li class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Contribuyes al cuidado ambiental</span>
+                            </li>
+                            <li class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Facilitas el reciclaje para otros</span>
+                            </li>
+                            <li class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Formas parte del cambio positivo</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Verification Process Card -->
+                    <div class="info-card process-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-clock"></i>
+                            Proceso de Verificación
+                        </h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Envías la sugerencia</h4>
+                                    <p>Completas el formulario con la información del punto.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Verificamos los datos</h4>
+                                    <p>Nuestro equipo confirma la información en 24-48 horas.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Publicamos el punto</h4>
+                                    <p>El nuevo punto aparece en el mapa para toda la comunidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tips Card -->
+                    <div class="info-card tips-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-lightbulb"></i>
+                            Consejos para tu sugerencia
+                        </h3>
+                        <ul class="tips-list">
+                            <li class="tip-item">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>Verifica que el lugar realmente acepte reciclaje</span>
+                            </li>
+                            <li class="tip-item">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>Incluye la dirección completa y exacta</span>
+                            </li>
+                            <li class="tip-item">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>Menciona horarios específicos si los conoces</span>
+                            </li>
+                            <li class="tip-item">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>Agrega cualquier regla o restricción especial</span>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        (function (d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function () {
+                window.voiceflow.chat.load({
+                    verify: { projectID: '68ce0e495682320b1b0f1dfe' },
+                    url: 'https://general-runtime.voiceflow.com',
+                    versionID: 'production',
+                    voice: {
+                        url: "https://runtime-api.voiceflow.com"
+                    }
+                });
+            }
+            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+            v.type = "text/javascript";
+            s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+    </script>
+
+    <script src="../Logic/SugerirPunto.js"></script>
+</body>
+
+</html>

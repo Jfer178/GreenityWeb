@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración - Grennity</title>
+    <link rel="icon" type="image/png" href="/Img/LogoGnormal.png">
+    <link rel="stylesheet" href="../Styles/Configuracion.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../Img/LogoNavBar.jpg" alt="Grennity Logo">
+            </div>
+            <nav class="nav">
+                <a href="/index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    Inicio
+                </a>
+                <a href="/pages/Mapa.html" class="nav-item">
+                    <i class="fas fa-map"></i>
+                    Mapa
+                </a>
+                <a href="/pages/Educativo.html" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    Educativo
+                </a>
+                <a href="/pages/SugerirPunto.html" class="nav-item">
+                    <i class="fas fa-plus"></i>
+                    Sugerir Punto
+                    <span class="new-badge">Nuevo</span>
+                </a>
+                <a href="/pages/Contacto.html" class="nav-item">
+                    <i class="fas fa-phone"></i>
+                    Contacto
+                </a>
+                <a href="/pages/Configuracion.html" class="nav-item active">
+                    <i class="fas fa-cog"></i>
+                    Configuración
+                </a>
+                <button class="login-btn">
+                    <i class="fas fa-user"></i>
+                    Iniciar Sesión
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="config-header">
+                <h1>Configuración</h1>
+                <p>Personaliza tu experiencia con EcoFinder</p>
+            </div>
+
+            <!-- Configuración de Ubicación -->
+            <section class="config-section">
+                <div class="section-header">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h2>Configuración de Ubicación</h2>
+                </div>
+                
+                <div class="form-group">
+                    <label for="default-location">Ubicación predeterminada</label>
+                    <input type="text" id="default-location" placeholder="Ej: Palermo, Buenos Aires">
+                    <small>Se usará cuando no detectemos tu ubicación automáticamente.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="search-radius">Radio de búsqueda predeterminado</label>
+                    <div class="slider-container">
+                        <input type="range" id="search-radius" min="1" max="50" value="10" class="slider">
+                        <span class="slider-value">5 km</span>
+                    </div>
+                </div>
+
+                <div class="toggle-group">
+                    <div class="toggle-item">
+                        <span>Detectar ubicación automáticamente</span>
+                        <small>Usar GPS para encontrar puntos cercanos.</small>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="auto-location">
+                            <span class="slider-toggle"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <span>Recordar puntos favoritos</span>
+                        <small>Guardar tus puntos de reciclaje preferidos.</small>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="remember-favorites">
+                            <span class="slider-toggle"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="notifications-group">
+                    <div class="section-subheader">
+                        <i class="fas fa-bell"></i>
+                        <h3>Notificaciones</h3>
+                    </div>
+                    <div class="toggle-group">
+                        <div class="toggle-item">
+                            <span>Push</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="push-notifications">
+                                <span class="slider-toggle"></span>
+                            </label>
+                        </div>
+                        <div class="toggle-item">
+                            <span>Email</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="email-notifications">
+                                <span class="slider-toggle"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="save-btn">
+                    <i class="fas fa-save"></i>
+                    Guardar cambios
+                </button>
+            </section>
+
+            <!-- Preferencias de la Aplicación -->
+            <section class="config-section">
+                <div class="section-header">
+                    <i class="fas fa-cog"></i>
+                    <h2>Preferencias de la Aplicación</h2>
+                </div>
+
+                <div class="form-group">
+                    <label for="app-theme">Tema de la aplicación</label>
+                    <select id="app-theme" class="custom-select">
+                        <option value="">Selecciona una opción</option>
+                        <option value="light">Claro</option>
+                        <option value="dark">Oscuro</option>
+                        <option value="auto">Automático</option>
+                    </select>
+                </div>
+
+                <div class="toggle-group">
+                    <div class="toggle-item">
+                        <span>Vista compacta</span>
+                        <small>Mostrar más información en menos espacio.</small>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="compact-view">
+                            <span class="slider-toggle"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <span>Mostrar consejos</span>
+                        <small>Mostrar tips útiles mientras navegas.</small>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="show-tips">
+                            <span class="slider-toggle"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <span>Actualización automática</span>
+                        <small>Actualizar datos cada 5 minutos.</small>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="auto-update">
+                            <span class="slider-toggle"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="language">Idioma</label>
+                    <select id="language" class="custom-select">
+                        <option value="">Selecciona una opción</option>
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                        <option value="pt">Português</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="map-style">Estilo del mapa</label>
+                    <select id="map-style" class="custom-select">
+                        <option value="">Selecciona una opción</option>
+                        <option value="standard">Estándar</option>
+                        <option value="satellite">Satélite</option>
+                        <option value="terrain">Terreno</option>
+                    </select>
+                </div>
+
+                <div class="mobile-config">
+                    <div class="section-subheader">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Configuración móvil</h3>
+                    </div>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-eye"></i>
+                            <span>Responsive</span>
+                            <small>Adaptado a móvil</small>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-hand-paper"></i>
+                            <span>Touch</span>
+                            <small>Gestos táctiles</small>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-cloud-slash"></i>
+                            <span>Offline</span>
+                            <small>Funciona sin internet</small>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-download"></i>
+                            <span>PWA</span>
+                            <small>Instalar en móvil</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cuenta de Usuario -->
+            <section class="config-section">
+                <div class="section-header">
+                    <i class="fas fa-user"></i>
+                    <h2>Cuenta de Usuario</h2>
+                </div>
+
+                <div class="user-info">
+                    <div class="user-details">
+                        <div class="user-name">Usuario EcoFinder</div>
+                        <div class="user-email">
+                            <i class="fas fa-envelope"></i>
+                            email@gmail.com
+                        </div>
+                    </div>
+                    <button class="edit-profile-btn">
+                        <i class="fas fa-edit"></i>
+                        Editar Perfil
+                    </button>
+                </div>
+
+                <div class="usage-stats">
+                    <h3>Estadísticas de uso</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Puntos sugeridos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Puntos favoritos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">47</span>
+                            <span class="stat-label">Búsquedas realizadas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">23</span>
+                            <span class="stat-label">Días activo</span>
+                        </div>
+                    </div>
+                    <div class="user-meta">
+                        <p>Miembro desde: <strong>Enero 2024</strong></p>
+                        <p>Última actividad: <strong>Hoy</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seguridad y Datos -->
+            <section class="config-section">
+                <div class="section-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <h2>Seguridad y Datos</h2>
+                </div>
+
+                <div class="security-buttons">
+                    <button class="security-btn">
+                        <i class="fas fa-download"></i>
+                        Exportar datos
+                    </button>
+                    <button class="security-btn">
+                        <i class="fas fa-key"></i>
+                        Cambiar contraseña
+                    </button>
+                    <button class="security-btn danger">
+                        <i class="fas fa-trash"></i>
+                        Eliminar cuenta
+                    </button>
+                </div>
+
+                <p class="security-info">
+                    Tu información personal está protegida y solo se usa para mejorar tu experiencia con EcoFinder. No compartimos datos con terceros.
+                </p>
+            </section>
+
+            <!-- Privacidad y Datos -->
+            <section class="config-section">
+                <div class="section-header">
+                    <i class="fas fa-lock"></i>
+                    <h2>Privacidad y Datos</h2>
+                </div>
+
+                <div class="toggle-group">
+                    <div class="toggle-item">
+                        <span>Análisis de uso</span>
+                        <small>Ayúdanos a mejorar la app compartiendo datos anónimos de uso.</small>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="usage-analysis">
+                            <span class="slider-toggle"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <span>Datos de ubicación</span>
+                        <small>Permitir el uso de tu ubicación para encontrar puntos cercanos.</small>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="location-data">
+                            <span class="slider-toggle"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <span>Cookies funcionales</span>
+                        <small>Guardar preferencias y configuraciones en tu dispositivo.</small>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="functional-cookies">
+                            <span class="slider-toggle"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="privacy-info">
+                    <h3>Información sobre privacidad</h3>
+                    <ul>
+                        <li>Solo recopilamos datos necesarios para el funcionamiento de la aplicación.</li>
+                        <li>Tu ubicación se procesa localmente y no se almacena en nuestros servidores.</li>
+                        <li>Puedes exportar o eliminar todos tus datos en cualquier momento.</li>
+                        <li>Cumplimos con las regulaciones de protección de datos vigentes.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-links">
+                    <a href="#" class="privacy-link">Ver políticas de privacidad</a>
+                    <a href="#" class="privacy-link">Términos de servicio</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+              window.voiceflow.chat.load({
+                verify: { projectID: '68ce0e495682320b1b0f1dfe' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production',
+                voice: {
+                  url: "https://runtime-api.voiceflow.com"
+                }
+              });
+            }
+            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
+            v.type = "text/javascript"; 
+            s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+      </script>
+
+    <script src="../Logic/Configuracion.js"></script>
+</body>
+</html>

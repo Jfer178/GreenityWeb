@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Puntos de Reciclaje - Grennity</title>
+    <link rel="icon" type="image/png" href="/Img/LogoGnormal.png">
+    <link rel="stylesheet" href="../Styles/Mapa.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../Img/LogoNavBar.jpg" alt="Grennity Logo">
+            </div>
+            <nav class="nav">
+                <a href="../index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    Inicio
+                </a>
+                <a href="/pages/Mapa.html" class="nav-item active">
+                    <i class="fas fa-map"></i>
+                    Mapa
+                </a>
+                <a href="/pages/Educativo.html" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    Educativo
+                </a>
+                <a href="/pages/SugerirPunto.html" class="nav-item">
+                    <i class="fas fa-plus"></i>
+                    Sugerir Punto
+                    <span class="new-badge">Nuevo</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-phone"></i>
+                    Contacto
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    Configuración
+                </a>
+                <button class="login-btn">
+                    <i class="fas fa-user"></i>
+                    Iniciar Sesión
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Filtros Section -->
+                <aside class="filters-section">
+                    <h2 class="filters-title">Filtros</h2>
+                    
+                    <!-- Distancia Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label">Distancia: <span id="distance-value">1 km</span></label>
+                        <div class="slider-container">
+                            <input type="range" id="distance-slider" class="distance-slider" min="1" max="20" value="1">
+                            <div class="slider-labels">
+                                <span>1 km</span>
+                                <span>20 km</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tipo de Material Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label">Tipo de Material</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="material-checkbox" value="plastico">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Plástico</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="material-checkbox" value="papel">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Papel</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="material-checkbox" value="vidrio">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Vidrio</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="material-checkbox" value="metal">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Metal</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="material-checkbox" value="electronicos">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Electrónicos</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="material-checkbox" value="pilas">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Pilas</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="material-checkbox" value="aceite">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Aceite</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="material-checkbox" value="textiles">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Textiles</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="material-checkbox" value="organicos">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Orgánicos</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Horarios Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label">Horarios</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="schedule-checkbox" value="24h">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">24 horas</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="schedule-checkbox" value="comercial">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Horario comercial</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="schedule-checkbox" value="fines">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Fines de semana</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="schedule-checkbox" value="semana">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Solo entre semana</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Apply Filters Button -->
+                    <button class="apply-filters-btn">
+                        <i class="fas fa-filter"></i>
+                        Aplicar Filtros
+                    </button>
+                </aside>
+
+                <!-- Mapa Section -->
+                <section class="map-section">
+                    <h2 class="map-title">Mapa Interactivo</h2>
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Mapa Interactivo</p>
+                            <small>Integración con Google Maps próximamente</small>
+                        </div>
+                        <div class="map-controls">
+                            <button class="map-control-btn" id="my-location-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Mi Ubicación
+                            </button>
+                            <button class="map-control-btn" id="fullscreen-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                        <div class="map-legend">
+                            <h4>Puntos de reciclaje</h4>
+                            <div class="legend-item">
+                                <div class="legend-icon empresas"></div>
+                                <span>Empresas</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-icon centros"></div>
+                                <span>Centros comerciales</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-icon universidades"></div>
+                                <span>Universidades</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Puntos de Reciclaje Section -->
+            <section class="recycling-points-section">
+                <div class="section-header">
+                    <h2 class="section-title">Puntos de Reciclaje Cercanos</h2>
+                    <div class="view-controls">
+                        <button class="view-btn active" id="list-view">
+                            <i class="fas fa-list"></i>
+                            Lista
+                        </button>
+                        <button class="view-btn" id="grid-view">
+                            <i class="fas fa-th"></i>
+                            Cuadrícula
+                        </button>
+                    </div>
+                </div>
+
+                <div class="points-container" id="points-container">
+                    <!-- EcoPunto San Martín -->
+                    <div class="point-card" data-type="empresas">
+                        <div class="point-header">
+                            <div class="point-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="point-info">
+                                <h3 class="point-name">EcoPunto San Martín</h3>
+                                <p class="point-address">Av. San Martín 1234, Centro</p>
+                                <div class="point-status">
+                                    <span class="distance">0.8 km</span>
+                                    <span class="status open">• Abierto</span>
+                                </div>
+                            </div>
+                            <div class="point-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                        <div class="point-materials">
+                            <span class="material-tag">Plástico</span>
+                            <span class="material-tag">Papel</span>
+                            <span class="material-tag">Vidrio</span>
+                            <span class="material-tag">Metal</span>
+                        </div>
+                        <div class="point-schedule">
+                            <i class="fas fa-clock"></i>
+                            <span>Lun-Vie: 8:00-18:00, Sáb: 9:00-14:00</span>
+                        </div>
+                        <div class="point-actions">
+                            <button class="action-btn primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Cómo llegar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-phone"></i>
+                                Llamar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-info-circle"></i>
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Ecopunto Belgrano -->
+                    <div class="point-card" data-type="empresas">
+                        <div class="point-header">
+                            <div class="point-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="point-info">
+                                <h3 class="point-name">Ecopunto Belgrano</h3>
+                                <p class="point-address">Calle Belgrano 567, Belgrano</p>
+                                <div class="point-status">
+                                    <span class="distance">1.2 km</span>
+                                    <span class="status open">• Abierto</span>
+                                </div>
+                            </div>
+                            <div class="point-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.2</span>
+                            </div>
+                        </div>
+                        <div class="point-materials">
+                            <span class="material-tag">Papel</span>
+                            <span class="material-tag">Cartón</span>
+                            <span class="material-tag">Pilas</span>
+                            <span class="material-tag">Electrónicos</span>
+                        </div>
+                        <div class="point-schedule">
+                            <i class="fas fa-clock"></i>
+                            <span>Lun-Dom: 24 horas</span>
+                        </div>
+                        <div class="point-actions">
+                            <button class="action-btn primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Cómo llegar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-phone"></i>
+                                Llamar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-info-circle"></i>
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Centro comercial -->
+                    <div class="point-card" data-type="centros">
+                        <div class="point-header">
+                            <div class="point-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="point-info">
+                                <h3 class="point-name">Centro comercial</h3>
+                                <p class="point-address">Av. Libertador 890, Núñez</p>
+                                <div class="point-status">
+                                    <span class="distance">2.1 km</span>
+                                    <span class="status closing">• Próximo a cerrar</span>
+                                </div>
+                            </div>
+                            <div class="point-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <div class="point-materials">
+                            <span class="material-tag">Aceite</span>
+                            <span class="material-tag">Textiles</span>
+                            <span class="material-tag">Orgánicos</span>
+                            <span class="material-tag">Vidrio</span>
+                        </div>
+                        <div class="point-schedule">
+                            <i class="fas fa-clock"></i>
+                            <span>Lun-Vie: 9:00-17:00</span>
+                        </div>
+                        <div class="point-actions">
+                            <button class="action-btn primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Cómo llegar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-phone"></i>
+                                Llamar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-info-circle"></i>
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Reciclaje Express Palermo -->
+                    <div class="point-card" data-type="empresas">
+                        <div class="point-header">
+                            <div class="point-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="point-info">
+                                <h3 class="point-name">Reciclaje Express Palermo</h3>
+                                <p class="point-address">Honduras 2345, Palermo</p>
+                                <div class="point-status">
+                                    <span class="distance">1.8 km</span>
+                                    <span class="status open">• Abierto</span>
+                                </div>
+                            </div>
+                            <div class="point-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.0</span>
+                            </div>
+                        </div>
+                        <div class="point-materials">
+                            <span class="material-tag">Plástico</span>
+                            <span class="material-tag">Metal</span>
+                            <span class="material-tag">Electrónicos</span>
+                        </div>
+                        <div class="point-schedule">
+                            <i class="fas fa-clock"></i>
+                            <span>Lun-Sáb: 10:00-20:00</span>
+                        </div>
+                        <div class="point-actions">
+                            <button class="action-btn primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Cómo llegar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-phone"></i>
+                                Llamar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-info-circle"></i>
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- EcoStation Recoleta -->
+                    <div class="point-card" data-type="universidades">
+                        <div class="point-header">
+                            <div class="point-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="point-info">
+                                <h3 class="point-name">EcoStation Recoleta</h3>
+                                <p class="point-address">Av. Callao 1122, Recoleta</p>
+                                <div class="point-status">
+                                    <span class="distance">1.5 km</span>
+                                    <span class="status open">• Abierto</span>
+                                </div>
+                            </div>
+                            <div class="point-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.3</span>
+                            </div>
+                        </div>
+                        <div class="point-materials">
+                            <span class="material-tag">Papel</span>
+                            <span class="material-tag">Vidrio</span>
+                            <span class="material-tag">Pilas</span>
+                            <span class="material-tag">Textiles</span>
+                        </div>
+                        <div class="point-schedule">
+                            <i class="fas fa-clock"></i>
+                            <span>Lun-Dom: 8:00-22:00</span>
+                        </div>
+                        <div class="point-actions">
+                            <button class="action-btn primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Cómo llegar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-phone"></i>
+                                Llamar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-info-circle"></i>
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Punto Limpio Barracas -->
+                    <div class="point-card" data-type="empresas">
+                        <div class="point-header">
+                            <div class="point-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="point-info">
+                                <h3 class="point-name">Punto Limpio Barracas</h3>
+                                <p class="point-address">Av. Montes de Oca 678, Barracas</p>
+                                <div class="point-status">
+                                    <span class="distance">3.2 km</span>
+                                    <span class="status closed">• Cerrado</span>
+                                </div>
+                            </div>
+                            <div class="point-rating">
+                                <i class="fas fa-star"></i>
+                                <span>3.8</span>
+                            </div>
+                        </div>
+                        <div class="point-materials">
+                            <span class="material-tag">Orgánicos</span>
+                            <span class="material-tag">Aceite</span>
+                            <span class="material-tag">Metal</span>
+                        </div>
+                        <div class="point-schedule">
+                            <i class="fas fa-clock"></i>
+                            <span>Lun-Vie: 8:00-16:00</span>
+                        </div>
+                        <div class="point-actions">
+                            <button class="action-btn primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Cómo llegar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-phone"></i>
+                                Llamar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-info-circle"></i>
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+              window.voiceflow.chat.load({
+                verify: { projectID: '68ce0e495682320b1b0f1dfe' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production',
+                voice: {
+                  url: "https://runtime-api.voiceflow.com"
+                }
+              });
+            }
+            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
+            v.type = "text/javascript"; 
+            s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+      </script>
+
+    <script src="/Logic/Mapa.js"></script>
+</body>
+</html>

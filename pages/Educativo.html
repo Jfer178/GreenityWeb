@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección Educativa - Grennity</title>
+    <link rel="icon" type="image/png" href="/Img/LogoGnormal.png">
+    <link rel="stylesheet" href="../Styles/Educativo.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../Img/LogoNavBar.jpg" alt="Grennity Logo">
+            </div>
+            <nav class="nav">
+                <a href="/index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    Inicio
+                </a>
+                <a href="/pages/Mapa.html" class="nav-item">
+                    <i class="fas fa-map"></i>
+                    Mapa
+                </a>
+                <a href="/pages/Educativo.html" class="nav-item active">
+                    <i class="fas fa-book"></i>
+                    Educativo
+                </a>
+                <a href="/pages/SugerirPunto.html" class="nav-item">
+                    <i class="fas fa-plus"></i>
+                    Sugerir Punto
+                    <span class="new-badge">Nuevo</span>
+                </a>
+                <a href="/pages/Contacto.html" class="nav-item">
+                    <i class="fas fa-phone"></i>
+                    Contacto
+                </a>
+                <a href="/pages/Configuracion.html" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    Configuración
+                </a>
+                <button class="login-btn">
+                    <i class="fas fa-user"></i>
+                    Iniciar Sesión
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h1 class="hero-title">Aprende a Reciclar Correctamente</h1>
+                    <p class="hero-subtitle">Descubre cómo preparar tus materiales, dónde llevarlos y por qué cada acción cuenta para el medio ambiente</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">
+                            <i class="fas fa-play"></i>
+                            Ver guía en video
+                        </button>
+                        <button class="btn-secondary">
+                            <i class="fas fa-download"></i>
+                            Descargar guía PDF
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4 Steps Section -->
+            <section class="steps-section">
+                <div class="section-header">
+                    <h2 class="section-title">Cómo Reciclar en 4 Pasos</h2>
+                    <p class="section-subtitle">Sigue esta guía simple para asegurar que tus materiales sean reciclados correctamente</p>
+                </div>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Separa en casa</h3>
+                        <p class="step-description">Clasifica tus residuos en diferentes contenedores según el material</p>
+                        <ul class="step-list">
+                            <li><i class="fas fa-check"></i> Usa contenedores separados</li>
+                            <li><i class="fas fa-check"></i> Etiqueta cada contenedor</li>
+                            <li><i class="fas fa-check"></i> Mantén los materiales secos</li>
+                        </ul>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Limpia y prepara</h3>
+                        <p class="step-description">Lava los envases y retira etiquetas cuando sea necesario</p>
+                        <ul class="step-list">
+                            <li><i class="fas fa-check"></i> Enjuaga con agua</li>
+                            <li><i class="fas fa-check"></i> Retira tapas y etiquetas</li>
+                            <li><i class="fas fa-check"></i> Deja secar completamente</li>
+                        </ul>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Encuentra el punto</h3>
+                        <p class="step-description">Usa nuestro mapa para localizar el centro de reciclaje más cercano</p>
+                        <ul class="step-list">
+                            <li><i class="fas fa-check"></i> Verifica horarios</li>
+                            <li><i class="fas fa-check"></i> Confirma materiales aceptados</li>
+                            <li><i class="fas fa-check"></i> Planifica tu ruta</li>
+                        </ul>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Deposita correctamente</h3>
+                        <p class="step-description">Lleva tus materiales al punto de reciclaje siguiendo las reglas del lugar</p>
+                        <ul class="step-list">
+                            <li><i class="fas fa-check"></i> Respeta las indicaciones</li>
+                            <li><i class="fas fa-check"></i> Usa los contenedores correctos</li>
+                            <li><i class="fas fa-check"></i> Pregunta si tienes dudas</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Material Guides Section -->
+            <section class="material-guides-section">
+                <div class="section-header">
+                    <h2 class="section-title">Guías por Material</h2>
+                    <p class="section-subtitle">Aprende cómo preparar cada tipo de material para maximizar su reciclaje</p>
+                </div>
+                <div class="material-tabs">
+                    <button class="material-tab active" data-material="plastico">Plástico</button>
+                    <button class="material-tab" data-material="papel">Papel y Cartón</button>
+                    <button class="material-tab" data-material="vidrio">Vidrio</button>
+                    <button class="material-tab" data-material="metal">Metal</button>
+                </div>
+                <div class="material-content">
+                    <!-- Plástico -->
+                    <div class="material-guide active" id="plastico">
+                        <div class="guide-header">
+                            <h3 class="guide-title">
+                                <i class="fas fa-recycle"></i>
+                                Plástico
+                            </h3>
+                            <p class="guide-subtitle">Guía completa de reciclaje</p>
+                        </div>
+                        <div class="guide-table">
+                            <div class="table-column accepted">
+                                <h4 class="column-title">Aceptados</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Botellas PET</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Bolsas plásticas</span>
+                                </div>
+                            </div>
+                            <div class="table-column rejected">
+                                <h4 class="column-title">No Aceptados</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-times"></i>
+                                    <span>Envases de yogur</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-times"></i>
+                                    <span>Tapas de botellas</span>
+                                </div>
+                            </div>
+                            <div class="table-column preparation">
+                                <h4 class="column-title">Preparación</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Lavar y secar</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Retirar etiquetas</span>
+                                </div>
+                            </div>
+                            <div class="table-column tips">
+                                <h4 class="column-title">Consejos</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Verificar número de reciclaje</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Comprimir para ahorrar espacio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Papel y Cartón -->
+                    <div class="material-guide" id="papel">
+                        <div class="guide-header">
+                            <h3 class="guide-title">
+                                <i class="fas fa-file-alt"></i>
+                                Papel y Cartón
+                            </h3>
+                            <p class="guide-subtitle">Guía completa de reciclaje</p>
+                        </div>
+                        <div class="guide-table">
+                            <div class="table-column accepted">
+                                <h4 class="column-title">Aceptados</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Periódicos y revistas</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Cajas de cartón</span>
+                                </div>
+                            </div>
+                            <div class="table-column rejected">
+                                <h4 class="column-title">No Aceptados</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-times"></i>
+                                    <span>Papel encerado</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-times"></i>
+                                    <span>Papel higiénico usado</span>
+                                </div>
+                            </div>
+                            <div class="table-column preparation">
+                                <h4 class="column-title">Preparación</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Retirar grapas y clips</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Mantener seco</span>
+                                </div>
+                            </div>
+                            <div class="table-column tips">
+                                <h4 class="column-title">Consejos</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>No mezclar con cartón húmedo</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Separar por tipo de papel</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vidrio -->
+                    <div class="material-guide" id="vidrio">
+                        <div class="guide-header">
+                            <h3 class="guide-title">
+                                <i class="fas fa-wine-bottle"></i>
+                                Vidrio
+                            </h3>
+                            <p class="guide-subtitle">Guía completa de reciclaje</p>
+                        </div>
+                        <div class="guide-table">
+                            <div class="table-column accepted">
+                                <h4 class="column-title">Aceptados</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Botellas de vidrio</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Frascos de conservas</span>
+                                </div>
+                            </div>
+                            <div class="table-column rejected">
+                                <h4 class="column-title">No Aceptados</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-times"></i>
+                                    <span>Vidrio roto</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-times"></i>
+                                    <span>Cristales de ventanas</span>
+                                </div>
+                            </div>
+                            <div class="table-column preparation">
+                                <h4 class="column-title">Preparación</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Enjuagar con agua</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Retirar tapas metálicas</span>
+                                </div>
+                            </div>
+                            <div class="table-column tips">
+                                <h4 class="column-title">Consejos</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Manejar con cuidado</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Separar por color</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Metal -->
+                    <div class="material-guide" id="metal">
+                        <div class="guide-header">
+                            <h3 class="guide-title">
+                                <i class="fas fa-cog"></i>
+                                Metal
+                            </h3>
+                            <p class="guide-subtitle">Guía completa de reciclaje</p>
+                        </div>
+                        <div class="guide-table">
+                            <div class="table-column accepted">
+                                <h4 class="column-title">Aceptados</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Latas de aluminio</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Latas de conservas</span>
+                                </div>
+                            </div>
+                            <div class="table-column rejected">
+                                <h4 class="column-title">No Aceptados</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-times"></i>
+                                    <span>Latas con restos de pintura</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-times"></i>
+                                    <span>Envases de aerosol con contenido</span>
+                                </div>
+                            </div>
+                            <div class="table-column preparation">
+                                <h4 class="column-title">Preparación</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Enjuagar completamente</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Aplanar latas</span>
+                                </div>
+                            </div>
+                            <div class="table-column tips">
+                                <h4 class="column-title">Consejos</h4>
+                                <div class="table-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Usar imán para separar</span>
+                                </div>
+                                <div class="table-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Verificar que estén vacíos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Myths vs Reality Section -->
+            <section class="myths-section">
+                <div class="section-header">
+                    <h2 class="section-title">Mitos vs Realidades</h2>
+                    <p class="section-subtitle">Desmontamos los mitos más comunes sobre el reciclaje para que puedas hacerlo correctamente</p>
+                </div>
+                <div class="myths-grid">
+                    <div class="myth-card">
+                        <h3 class="myth-title">Todo el plástico se puede reciclar</h3>
+                        <div class="myth-content">
+                            <div class="myth-item myth">
+                                <i class="fas fa-times"></i>
+                                <span>Todo el plástico se puede reciclar</span>
+                            </div>
+                            <div class="myth-item reality">
+                                <i class="fas fa-check"></i>
+                                <span>Solo ciertos tipos de plástico son reciclables. Verifica los números en el fondo del envase.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myth-card">
+                        <h3 class="myth-title">No importa si los envases están sucios</h3>
+                        <div class="myth-content">
+                            <div class="myth-item myth">
+                                <i class="fas fa-times"></i>
+                                <span>No importa si los envases están sucios</span>
+                            </div>
+                            <div class="myth-item reality">
+                                <i class="fas fa-check"></i>
+                                <span>Los envases deben estar limpios para ser reciclados correctamente. Los residuos contaminan el proceso.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myth-card">
+                        <h3 class="myth-title">El papel encerado es reciclable</h3>
+                        <div class="myth-content">
+                            <div class="myth-item myth">
+                                <i class="fas fa-times"></i>
+                                <span>El papel encerado es reciclable</span>
+                            </div>
+                            <div class="myth-item reality">
+                                <i class="fas fa-check"></i>
+                                <span>El papel encerado no se puede reciclar debido a su recubrimiento. Va en la basura común.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myth-card">
+                        <h3 class="myth-title">Las bolsas plásticas van en el contenedor de reciclaje</h3>
+                        <div class="myth-content">
+                            <div class="myth-item myth">
+                                <i class="fas fa-times"></i>
+                                <span>Las bolsas plásticas van en el contenedor de reciclaje</span>
+                            </div>
+                            <div class="myth-item reality">
+                                <i class="fas fa-check"></i>
+                                <span>Las bolsas plásticas pueden dañar las máquinas. Llévalas a puntos de recolección especiales.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myth-card">
+                        <h3 class="myth-title">Reciclar no hace diferencia real</h3>
+                        <div class="myth-content">
+                            <div class="myth-item myth">
+                                <i class="fas fa-times"></i>
+                                <span>Reciclar no hace diferencia real</span>
+                            </div>
+                            <div class="myth-item reality">
+                                <i class="fas fa-check"></i>
+                                <span>Reciclar una tonelada de papel salva 17 árboles y reduce las emisiones de CO2 significativamente.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myth-card">
+                        <h3 class="myth-title">El vidrio roto se puede reciclar normalmente</h3>
+                        <div class="myth-content">
+                            <div class="myth-item myth">
+                                <i class="fas fa-times"></i>
+                                <span>El vidrio roto se puede reciclar normalmente</span>
+                            </div>
+                            <div class="myth-item reality">
+                                <i class="fas fa-check"></i>
+                                <span>El vidrio roto debe manejarse con cuidado especial y algunos centros no lo aceptan por seguridad.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Eco Tips Section -->
+            <section class="eco-tips-section">
+                <div class="section-header">
+                    <h2 class="section-title">Consejos Eco-Amigables</h2>
+                    <p class="section-subtitle">Pequeñas acciones que generan un gran impacto en el medio ambiente</p>
+                </div>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <h3 class="tip-title">Reduce antes de reciclar</h3>
+                        <p class="tip-description">La mejor forma de ayudar al ambiente es consumir menos. Piensa si realmente necesitas algo antes de comprar.</p>
+                        <div class="tip-impact">Impacto estimado: <strong>Hasta 50% menos residuos</strong></div>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <h3 class="tip-title">Reutiliza envases</h3>
+                        <p class="tip-description">Dale una segunda vida a frascos, botellas y contenedores. Úsalos para almacenar o como macetas.</p>
+                        <div class="tip-impact">Impacto estimado: <strong>Extiende vida útil 3x</strong></div>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="tip-title">Compostaje casero</h3>
+                        <p class="tip-description">Los residuos orgánicos pueden convertirse en abono para plantas. Reduce hasta 30% de tu basura.</p>
+                        <div class="tip-impact">Impacto estimado: <strong>30% menos basura</strong></div>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="tip-title">Ahorra energía</h3>
+                        <p class="tip-description">Desconecta aparatos, usa LED y aprovecha la luz natural. Cada kWh ahorrado cuenta.</p>
+                        <div class="tip-impact">Impacto estimado: <strong>20% menos consumo</strong></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certification Section -->
+            <section class="certification-section">
+                <div class="section-header">
+                    <h2 class="section-title">⭐ Obtén tu Certificación en Reciclaje ⭐</h2>
+                    <p class="section-subtitle">Demuestra tus conocimientos y obtén un certificado oficial que valide tu compromiso con el medio ambiente</p>
+                </div>
+                <div class="certification-content">
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="cert-title">Certificación en Reciclaje Responsable</h3>
+                        <p class="cert-description">Completa nuestro examen de 10 preguntas y demuestra que conoces las mejores prácticas de reciclaje. Al aprobar con 9-10 puntos, obtendrás un certificado oficial descargable.</p>
+                        <div class="cert-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>10 preguntas especializadas</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Certificado oficial PDF</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Validación de conocimientos</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary cert-start-btn">
+                            <i class="fas fa-play"></i>
+                            Iniciar Examen
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fun Facts Section -->
+            <section class="fun-facts-section">
+                <div class="section-header">
+                    <h2 class="section-title">¿Sabías que...?</h2>
+                </div>
+                <div class="facts-list">
+                    <div class="fact-item">
+                        <i class="fas fa-check"></i>
+                        <span>Una botella plástica tarda 450 años en degradarse</span>
+                    </div>
+                    <div class="fact-item">
+                        <i class="fas fa-check"></i>
+                        <span>Reciclar una lata de aluminio ahorra 95% de energía</span>
+                    </div>
+                    <div class="fact-item">
+                        <i class="fas fa-check"></i>
+                        <span>El papel reciclado usa 60% menos agua</span>
+                    </div>
+                    <div class="fact-item">
+                        <i class="fas fa-check"></i>
+                        <span>1 tonelada de plástico reciclado = 2000 litros de petróleo ahorrados</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Share Section -->
+            <section class="share-section">
+                <div class="share-content">
+                    <div class="share-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h2 class="share-title">¡Comparte el conocimiento!</h2>
+                    <p class="share-subtitle">Ayuda a crear una comunidad más consciente compartiendo estos consejos con tus amigos y familiares</p>
+                    <div class="share-buttons">
+                        <button class="btn-outline">
+                            <i class="fas fa-share"></i>
+                            Compartir consejos
+                        </button>
+                        <button class="btn-primary">
+                            <i class="fas fa-download"></i>
+                            Descargar guía completa
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pop-up de invitación a certificación -->
+    <div id="certification-popup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div class="popup-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="popup-title">⭐ ¡Obtén tu Certificación! ⭐</h3>
+            </div>
+            <div class="popup-body">
+                <p class="popup-message">¿Sabías que puedes certificar tus conocimientos en reciclaje? Completa nuestro examen de 10 preguntas y obtén un certificado oficial que valide tu compromiso con el medio ambiente.</p>
+                <div class="popup-features">
+                    <div class="popup-feature">
+                        <i class="fas fa-star"></i>
+                        <span>Examen gratuito</span>
+                    </div>
+                    <div class="popup-feature">
+                        <i class="fas fa-certificate"></i>
+                        <span>Certificado PDF</span>
+                    </div>
+                    <div class="popup-feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Solo 5 minutos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-actions">
+                <button class="btn-secondary popup-later-btn">
+                    <i class="fas fa-clock"></i>
+                    Hacer Luego
+                </button>
+                <button class="btn-primary popup-start-btn">
+                    <i class="fas fa-play"></i>
+                    Realizar el Examen
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Trivia -->
+    <div id="trivia-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Examen de Certificación en Reciclaje</h3>
+                <button class="modal-close" id="close-trivia">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="trivia-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span class="progress-text" id="progress-text">Pregunta 1 de 10</span>
+                </div>
+                <div class="trivia-question" id="trivia-question">
+                    <!-- Las preguntas se cargarán dinámicamente -->
+                </div>
+                <div class="trivia-options" id="trivia-options">
+                    <!-- Las opciones se cargarán dinámicamente -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-outline" id="trivia-skip" style="display: none;">
+                    <i class="fas fa-forward"></i>
+                    Saltar
+                </button>
+                <button class="btn-primary" id="trivia-next" style="display: none;">
+                    <i class="fas fa-arrow-right"></i>
+                    Siguiente
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Resultados -->
+    <div id="results-modal" class="modal-overlay">
+        <div class="modal-content results-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Resultados del Examen</h3>
+            </div>
+            <div class="modal-body">
+                <div class="results-content" id="results-content">
+                    <!-- Los resultados se cargarán dinámicamente -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-outline" id="retake-exam">
+                    <i class="fas fa-redo"></i>
+                    Repetir Examen
+                </button>
+                <button class="btn-primary" id="download-certificate" style="display: none;">
+                    <i class="fas fa-download"></i>
+                    Descargar Certificado
+                </button>
+                <button class="btn-secondary" id="close-results">
+                    <i class="fas fa-check"></i>
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+              window.voiceflow.chat.load({
+                verify: { projectID: '68ce0e495682320b1b0f1dfe' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production',
+                voice: {
+                  url: "https://runtime-api.voiceflow.com"
+                }
+              });
+            }
+            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
+            v.type = "text/javascript"; 
+            s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+      </script>
+
+    <script src="../Logic/Educativo.js"></script>
+</body>
+</html>
